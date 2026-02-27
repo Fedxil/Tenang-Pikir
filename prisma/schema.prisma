@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+// Model untuk merepresentasikan sebuah halaman/artikel.
+// Untuk contoh ini, kita asumsikan hanya ada satu halaman engagement.
+model Page {
+  id       String    @id @default("engagement_page")
+  likes    Int       @default(0)
+  comments Comment[]
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  name      String
+  text      String   @db.Text
+  initial   String
+  createdAt DateTime @default(now())
+
+  page   Page   @relation(fields: [pageId], references: [id])
+  pageId String
+}
