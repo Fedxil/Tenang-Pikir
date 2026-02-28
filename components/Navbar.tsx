@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Brain, Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 
 export default function Navbar() {
@@ -76,35 +76,35 @@ export default function Navbar() {
           >
             <div className="flex flex-col p-6 gap-4">
               <Link
-                href="./#simulator"
+                href="#simulator"
                 className="text-sm font-semibold hover:text-teal-500 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Simulator
               </Link>
               <Link
-                href="./#edukasi"
+                href="#edukasi"
                 className="text-sm font-semibold hover:text-teal-500 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Edukasi
               </Link>
               <Link
-                href="./#diskusi"
+                href="#diskusi"
                 className="text-sm font-semibold hover:text-teal-500 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Diskusi
               </Link>
               <Link
-                href="./#etherapy"
+                href="#etherapy"
                 className="text-sm font-semibold hover:text-teal-500 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 e-Therapy
               </Link>
               <Link
-                href="#./about-us"
+                href="#about-us"
                 className="bg-teal-500 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:shadow-lg transition-all w-full text-center"
                 onClick={() => setIsOpen(false)}
               >
