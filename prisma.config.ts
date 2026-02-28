@@ -1,7 +1,8 @@
-import { defineConfig } from "prisma/config";
+import { defineConfig, env } from "prisma/config";
+import "dotenv/config";
 
 export default defineConfig({
   datasource: {
-    url: "mysql://root:@localhost:3306/web_tenang_pikir",
+    url: env("DATABASE_URL"),
   },
 });
