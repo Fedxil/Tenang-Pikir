@@ -1,16 +1,12 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-  provider = "prisma-client-js"
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
 }
 
 datasource db {
   provider = "postgresql"
 }
 
-// Model untuk merepresentasikan sebuah halaman/artikel.
-// Untuk contoh ini, kita asumsikan hanya ada satu halaman engagement.
 model Page {
   id       String    @id @default("engagement_page")
   likes    Int       @default(0)
