@@ -7,11 +7,11 @@ const team = [
   },
   {
     name: "Marcellino Jonathan",
-    nim: "322301",
+    nim: "32230118",
   },
   {
     name: "Elbert Janitra",
-    nim: "322301",
+    nim: "32230175",
   },
 ];
 
